@@ -1,0 +1,431 @@
+/* Header Styling */
+* {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+    padding: 15px 30px;
+    color: white;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.logo {
+    height: 120px;
+    flex-grow: 1;
+}
+
+.slogan {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #333;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.slogan span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.slogan .main {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f4a261;
+}
+
+.slogan .sub {
+    font-size: 16px;
+    color: #fff;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.social-icon {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    background: #333;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.social-icon img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s, opacity 0.3s;
+    cursor: pointer;
+}
+
+.social-icon img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+nav {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: hwb(54 5% 6%);
+}
+
+/* body Section */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-content {
+    padding: 40px;
+    flex: 1;
+}
+
+.card-content h2 {
+    color: #f4a261;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f4a261; /* Couleur initiale du trait */
+    padding-bottom: 10px;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Ajout de la transition pour la couleur du trait */
+}
+
+.card-content p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.card-image {
+    flex-shrink: 0;
+    height: 300px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #f4a261;
+    color: white;
+}
+
+.card:hover h2 {
+    color: rgb(85, 122, 242);
+    border-bottom-color: rgb(85, 122, 242); /* Changement de la couleur du trait au survol */
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* Footer */
+footer {
+    background: #111;
+    color: white;
+    padding-top: 0px;
+}
+
+/* Partie supérieure du footer */
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: rgb(159, 153, 228);
+    /* Changement de couleur */
+    color: black;
+    /* Assurer la lisibilité */
+}
+
+/* Logo */
+.logo-container {
+    position: relative;
+}
+
+.logo-bg {
+    background: white;
+    padding: 30px 70px;
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+}
+
+.logo-bg img {
+    height: 90px;
+}
+
+/* Informations de contact */
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Email et téléphone */
+.info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info i {
+    color: #ffcc00;
+    font-size: 20px;
+}
+
+.info p {
+    margin: 0;
+    font-size: 20px;
+    color: black;
+    /* Texte en noir pour lisibilité */
+}
+
+.img-mail img,
+.img-phone img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Partie inférieure du footer */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Assure l'alignement vertical */
+    padding: 15px 20px;
+    background-color: black;
+    color: white;
+    flex-wrap: nowrap; /* Empêche le retour à la ligne */
+}
+
+/* Correction du Copyright */
+.copyright {
+    font-size: 14px;
+    white-space: nowrap; /* Force le texte sur une seule ligne */
+    overflow: hidden; /* Évite tout dépassement */
+    text-overflow: clip; /* Affiche tout le texte sans "..." */
+    flex-grow: 1; /* Permet au texte d'occuper l’espace disponible */
+    text-align: left; /* Alignement naturel */
+    padding-right: 200px; /* Ajouter un petit espace avec le menu */
+}
+
+.footer-bottom p {
+    font-size: 20px;
+    margin: 0;
+    text-align: left;
+}
+
+.highlight {
+    color: hsl(32, 100%, 50%);
+    font-weight: bold;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Bouton retour en haut */
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(197, 184, 179);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#scrollToTop:hover {
+    background-color: blue;
+}
+
+/* Effet sur le menu lors du scroll */
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Animation des informations de contact */
+.contact-info {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Responsive Design */
+
+/* Tablette (1024px max) */
+@media screen and (max-width: 1024px) {
+    .header-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .slogan {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    nav {
+        justify-content: center;
+        padding: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
+
+/* Téléphone (600px max) */
+@media screen and (max-width: 600px) {
+    header {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .logo {
+        height: 80px;
+    }
+
+    .slogan {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .expertise-section {
+        padding: 20px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
